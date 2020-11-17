@@ -64,7 +64,7 @@ namespace MongoHomework
                 foreach (var pet in pets)
                 {
                     Console.Write(
-                        $"Имя: {pet.Name}\tВид: {pet.Type}\tВладелец: {pet.Owner.Name}\tТелефон: {pet.Owner.Phone}\t");
+                        $"Имя: {pet.Name}\tВид: {pet.Kind}\tВладелец: {pet.Owner.Name}\tТелефон: {pet.Owner.Phone}\t");
                     Console.WriteLine($"Дата регистрации: {pet.Date:dd.MM.yyyy}");
                 }
 

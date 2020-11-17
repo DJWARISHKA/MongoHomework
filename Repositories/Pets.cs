@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using MongoDB.Driver;
 using VeterinaryClinic.Entities;
@@ -13,7 +12,7 @@ namespace VeterinaryClinic.Repositories
             Collection.Indexes.CreateMany(new[]
             {
                 new CreateIndexModel<Pet>(Builders<Pet>.IndexKeys.Descending(pet => pet.Date)),
-                new CreateIndexModel<Pet>("{Type:1}")
+                new CreateIndexModel<Pet>("{Kind:1}")
             });
         }
 
@@ -34,17 +33,17 @@ namespace VeterinaryClinic.Repositories
         {
             return Collection
                 .Aggregate(new AggregateOptions {AllowDiskUse = true})
-                .Group(p => p.Type, group => new Group(group.Key, group.Count()))
+                .Group(p => p.Kind, group => new Group(group.Key, group.Count()))
                 .ToList();
         }
     }
 
     public class Group
     {
-        public readonly PetTypes Key;
         public readonly int Count;
+        public readonly PetKind Key;
 
-        public Group(PetTypes key, int count)
+        public Group(PetKind key, int count)
         {
             Key = key;
             Count = count;

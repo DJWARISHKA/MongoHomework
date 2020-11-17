@@ -21,7 +21,7 @@ namespace VeterinaryClinic
                 repository.Insert(new Pet
                 {
                     Name = names[rand.Next(0, 30)],
-                    Type = (PetTypes) rand.Next(0, 3),
+                    Kind = (PetKind) rand.Next(0, 3),
                     Date = new DateTime(2020, rand.Next(1, 13), rand.Next(1, 29)),
                     Owner = new Owner
                     {

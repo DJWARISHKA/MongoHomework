@@ -8,7 +8,7 @@ namespace VeterinaryClinic.Entities
     public class Pet : IEntity
     {
         public string Name { get; set; }
-        public PetTypes Type { get; set; }
+        public PetKind Kind { get; set; }
 
         [BsonDateTimeOptions(Kind = DateTimeKind.Local)]
         public DateTime Date { get; set; }
@@ -18,10 +18,10 @@ namespace VeterinaryClinic.Entities
         [BsonId] [BsonIgnoreIfDefault] public ObjectId Id { get; set; }
     }
 
-    public enum PetTypes
+    public enum PetKind
     {
-        Cat,
-        Dog,
-        Bird
+        Кот,
+        Собака,
+        Птица
     }
 }
