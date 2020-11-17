@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using MongoDB.Driver;
-using VeterinaryClinic.Entities;
+using MongoHomework.Entities;
 
-namespace VeterinaryClinic.Repositories
+namespace MongoHomework.Repositories
 {
     public class Pets : Repository<Pet>
     {

@@ -1,6 +1,6 @@
 ﻿using MongoDB.Bson;
 
-namespace VeterinaryClinic.Entities.Interfaces
+namespace MongoHomework.Entities
 {
     public interface IEntity
     {

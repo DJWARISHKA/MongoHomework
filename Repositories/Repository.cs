@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using MongoDB.Bson;
 using MongoDB.Driver;
-using VeterinaryClinic.Entities.Interfaces;
+using MongoHomework.Entities;
 
-namespace VeterinaryClinic.Repositories
+namespace MongoHomework.Repositories
 {
     public class Repository<TEntity> where TEntity : IEntity
     {

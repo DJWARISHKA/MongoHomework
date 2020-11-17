@@ -1,8 +1,7 @@
 ﻿using MongoDB.Driver;
-using MongoHomework;
-using VeterinaryClinic.Repositories;
+using MongoHomework.Repositories;
 
-namespace VeterinaryClinic
+namespace MongoHomework
 {
     internal static class Program
     {

@@ -1,9 +1,8 @@
 ﻿using System;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
-using VeterinaryClinic.Entities.Interfaces;
 
-namespace VeterinaryClinic.Entities
+namespace MongoHomework.Entities
 {
     public class Pet : IEntity
     {

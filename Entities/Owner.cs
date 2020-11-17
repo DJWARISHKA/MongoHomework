@@ -1,4 +1,4 @@
-﻿namespace VeterinaryClinic.Entities
+﻿namespace MongoHomework.Entities
 {
     public class Owner
     {
