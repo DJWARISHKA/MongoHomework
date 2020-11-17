@@ -8,7 +8,7 @@ namespace VeterinaryClinic
     {
         private static readonly string[] names = new string[30]
         {
-            "Федосий", "Ирина", "Виталий", "Софья", "Лев   ", "Ангелина", "Николай", "Эмилия", "Илья  ", "Алина ",
+            "Федосий", "Ирина", "Виталий", "Софья  ", "Лев   ", "Ангелина", "Николай", "Эмилия", "Илья  ", "Алина ",
             "Юлий  ", "Нона  ", "Филипп", "Светлана", "Вячеслав", "Дина  ", "Мечислав", "Владлена", "Игнат  ", "Аза   ",
             "Аким  ", "Полина", "Вадим", "Владислава", "Тимофей", "Вероника", "Лавр  ", "Маргарита", "Евстигней",
             "Изабелла"
@@ -17,7 +17,7 @@ namespace VeterinaryClinic
         public static void Initialize(Pets repository)
         {
             var rand = new Random(DateTime.Now.Millisecond);
-            for (var i = 0; i < 15; i++)
+            for (var i = 0; i < 13; i++)
                 repository.Insert(new Pet
                 {
                     Name = names[rand.Next(0, 30)],

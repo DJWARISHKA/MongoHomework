@@ -52,7 +52,8 @@ namespace MongoHomework
         {
             if (pageSize < 1) return;
             var page = 0;
-            var count = (int) Math.Ceiling((double) (_repository.Count() / pageSize));
+            var count = (int) _repository.Count() / pageSize;
+            if (_repository.Count() % pageSize > 0) count++;
             ConsoleKeyInfo key;
             do
             {
@@ -63,7 +64,7 @@ namespace MongoHomework
 
                 foreach (var pet in pets)
                 {
-                    Console.Write(
+                    Console.Write( //Что б табличка не сьехала, заместь Клички вывожу Имя
                         $"Имя: {pet.Name}\tВид: {pet.Kind}\tВладелец: {pet.Owner.Name}\tТелефон: {pet.Owner.Phone}\t");
                     Console.WriteLine($"Дата регистрации: {pet.Date:dd.MM.yyyy}");
                 }
@@ -94,7 +95,7 @@ namespace MongoHomework
             Console.WriteLine("Отчет");
             Console.WriteLine("Начало\n");
             foreach (var group in data)
-                Console.WriteLine($"{group.Count} {group.Key}s");
+                Console.WriteLine($"{group.Key}: {group.Count} особей");
             Console.WriteLine();
             Console.WriteLine("Конец");
 
